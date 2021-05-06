@@ -72,3 +72,31 @@ private static void haseSetSolution(int[] input, int sum) {
     }
   }
 ```
+### Find an element in a sorted rotated array - O(log n)
+
+```
+int[] input = {4 ,5 ,6 , 7, 0, 1, 2};
+        int target = 1;
+        int left = 0;
+        int right = input.length - 1;
+
+        // find pivot i.e min number - left will point to pivot element
+        while (left < right) {
+            int mid = left + (right - left) / 2;
+            if (input[mid] > input[right]) {
+                left = mid + 1;
+            } else {
+                right = mid;
+            }
+        }
+
+        int start = left;
+        left = 0;
+        right = input.length - 1;
+        if (target >= input[start] && target <= input[right]) {
+            left = start;
+        } else {
+            right = start;
+        }
+        System.out.println(left + ", " + right);
+```
