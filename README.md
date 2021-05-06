@@ -32,4 +32,43 @@
         } else {
             System.out.println(target);
         }
+    } 
+    
+```
+ 
+ 
+#### Two sum problem - two solutions
+
+```java
+private static void haseSetSolution(int[] input, int sum) {
+    Set<Integer> set = new HashSet<Integer>();
+    
+   
+    for (int i: input) {
+      int second = sum - i;
+      if(set.contains(second)) {
+        System.out.println(i + " , " + second);
+      } else {
+          set.add(i);
+      }
     }
+  }
+  
+  private static void pointerSolution(int[] input, int sum) {
+  Arrays.sort(input);
+    int min = 0;
+    int max = input.length - 1;
+    while (min < max) {
+      int currentSum = input[min] + input[max];
+      if (currentSum < sum) {
+        min++;
+      } else if(currentSum > sum) {
+        max--;
+      }
+      else {
+         System.out.println(input[min] + " , " + input[max]);
+        max--;
+      }
+    }
+  }
+```
