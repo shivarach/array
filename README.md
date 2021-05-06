@@ -74,7 +74,7 @@ private static void haseSetSolution(int[] input, int sum) {
 ```
 ### Find an element in a sorted rotated array - O(log n)
 
-```
+```java
 int[] input = {4 ,5 ,6 , 7, 0, 1, 2};
         int target = 1;
         int left = 0;
