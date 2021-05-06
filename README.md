@@ -37,7 +37,7 @@
 ```
  
  
-#### Two sum problem - two solutions
+### Two sum problem - two solutions
 
 ```java
 private static void haseSetSolution(int[] input, int sum) {
